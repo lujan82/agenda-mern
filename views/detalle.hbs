@@ -1,0 +1,71 @@
+{{> head title="Detalle contacto" }}
+
+	<div class="max-w-full h-screen bg-gray-800 py-12 relative">
+
+		<div class="fixed top-0 pt-6">
+			<h1 class="text-5xl pl-8 text-gray-500 mb-4">Detalle {{agenda.name}}</h1>
+			<button class="text-xs ml-8 block bg-transparent text-center hover:bg-green-600 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-700 hover:border-transparent rounded">
+				<a href="/agenda">Volver</a>
+			</button>
+		</div>
+
+		{{#if error}}
+			<h3>{{mensaje}}</h3>
+		{{else}}
+
+			<div class="w-full max-w-xs mx-auto mt-16 pt-16">
+
+				<form id="editar" data.id="{agenda.id}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+					<div class="mb-4">
+						<label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+							Nombre
+						</label>
+						<input placeholder="Nombre" name="name" value="{{agenda.name}}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" >
+					</div>
+
+					<div class="mb-4">
+						<label class="block text-gray-700 text-sm font-bold mb-2" for="work">
+							Puesto
+						</label>
+						<input placeholder="Puesto" name="work" value="{{agenda.work}}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="work" type="text">
+					</div>
+
+					<div class="mb-4">
+						<label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+							email
+						</label>
+						<input placeholder="Email" name="email" value="{{agenda.email}}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text">
+					</div>
+
+					<div class="mb-4">
+						<label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+							phone
+						</label>
+						<input placeholder="Teléfono" name="phone" value="{{agenda.phone}}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text">
+					</div>
+
+					<div class="flex items-center justify-between">
+						<button id="guardar" data-id="{{agenda.id}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+							Guardar
+						</button>
+					</div>
+				</form>
+
+					<button id="btnEliminar" data-id="{{agenda.id}}" class="bg-transparent flex mx-auto my-6 hover:bg-red-600 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent rounded">
+						Eliminar
+					</button>
+
+					<p class="text-center text-gray-500 text-xs">
+						&copy;2020 Charlie Corp. All rights reserved.
+					</p>
+			</div>
+
+		{{/if}}
+			
+	</div>
+
+	<script type="text/javascript" src="/js/update.js"></script>
+	<script type="text/javascript" src="/js/delete.js"></script>
+
+</body>
+</html>

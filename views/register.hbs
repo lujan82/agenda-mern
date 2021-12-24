@@ -1,0 +1,68 @@
+{{> head title="Agenda"}}
+
+	<div class="max-w-full h-screen sm:flex">
+		<div class="w-full sm:w-1/2 bg-gray-800 pt-12 sm:pt-0">
+			<div class="h-full font-sans antialiased bg-grey-lightest flex items-center">
+				
+				<!-- Content -->
+				<div class="w-full bg-grey-lightest mb-12">
+					<div class="text-3xl text-center pb-6">Register for a free account</div>
+						
+					<div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
+
+						<form action="register" method="post">
+							<div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
+								<div class="flex mb-4">
+									<div class="w-full mr-1">
+										<label class="block text-gray-700 text-sm font-bold mb-2" for="first_name">First Name</label>
+										<input id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" type="text" placeholder="Your first name">
+									</div>
+								</div>
+
+								<div class="mb-4">
+									<label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email Address</label>
+									<input id="email" name="email" type="email" placeholder="Your email address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  >
+								</div>
+
+								<div class="mb-4">
+									<label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+									<input id="password" name="password" type="password" placeholder="Your secure password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+									<p class="text-grey text-xs mt-1">At least 6 characters</p>
+									<p id="error" class="text-red-600 text-xs"></p>
+								</div>
+
+								<div class="flex items-center justify-between mt-8">
+									<button id="submit" type="submit" class="text-xs block bg-transparent text-center hover:bg-blue-600 text-blue-600 hover:text-white py-2 px-4 border border-blue-700 hover:border-transparent rounded" >
+										Sign Up
+									</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+					<p class="text-center text-gray-500 text-xs">
+						©2020 Luján Corp. All rights reserved.
+					</p>
+				</div>
+			
+			</div>
+	</div>
+
+		{{!-- 1/2 --}}
+		<div class="w-full sm:w-1/2 bg-gray-100 pt-24 sm:pt-0">
+			<div class="sm:w-full w-full h-full max-w-xs flex mx-auto flex-wrap items-center justify-center">
+				<div class="mb-12">
+						<h1 class="text-3xl text-center pb-6">Login</h1>
+						<a href="/" class="text-xs block bg-transparent text-center hover:bg-green-600 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-700 hover:border-transparent rounded" >
+							Go to Home
+						</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/register.js"></script>
+
+</body>
+</html>
